@@ -14,5 +14,16 @@ html {
 }
 
 body {
+  color: var(--color-text-on-primary-extra-dark);
+  font-size: var(--font-size);
   font-family: var(--font-family-sans);
+  background-color: var(--color-primary-extra-dark);
+}
+
+a {
+  color: var(--color-link-on-primary-extra-dark);
+
+  &:hover {
+    text-decoration: none;
+  }
 }
