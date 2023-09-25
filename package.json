@@ -5,7 +5,13 @@
   "author": "Gustavo Oliveira",
   "license": "ISC",
   "scripts": {
-    "start": "servor --reload"
+    "start": "servor --reload",
+    "css:build": "npm-run-all sass:compile css:prefix css:compress css:remove-partials",
+    "css:compress": "node-sass dist/styles.prefix.css dist/styles.css --output-style compressed",
+    "css:prefix": "postcss --use autoprefixer -b 'last 10 versions' dist/styles.comp.css -o dist/styles.prefix.css",
+    "css:remove-partials": "rm dist/styles.comp.css dist/styles.prefix.css",
+    "sass:compile": "node-sass styles/main.scss dist/styles.comp.css",
+    "sass:watch": "node-sass styles/main.scss dist/styles.css -w"
   },
   "devDependencies": {
     "autoprefixer": "10.4.16",
