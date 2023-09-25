@@ -1,0 +1,9 @@
+{
+  "name": "raskolnikov-rodion.github.io",
+  "version": "1.0.0",
+  "description": "Personal website built with HTML & Sass!",
+  "author": "Gustavo Oliveira",
+  "license": "ISC",
+  "scripts": {},
+  "devDependencies": {}
+}
