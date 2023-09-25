@@ -1,0 +1,31 @@
+{
+  "name": "raskolnikov-rodion.github.io",
+  "version": "1.0.0",
+  "description": "Personal website built with HTML & Sass!",
+  "author": "Gustavo Oliveira",
+  "license": "ISC",
+  "scripts": {
+    "start": "npm-run-all --parallel serve sass:watch",
+    "css:build": "npm-run-all sass:compile css:prefix css:compress css:remove-partials",
+    "css:compress": "node-sass dist/styles.prefix.css dist/styles.css --output-style compressed",
+    "css:prefix": "postcss --use autoprefixer -b 'last 10 versions' dist/styles.comp.css -o dist/styles.prefix.css",
+    "css:remove-partials": "rm dist/styles.comp.css dist/styles.prefix.css",
+    "config:git-hooks": "husky install",
+    "sass:compile": "node-sass styles/main.scss dist/styles.comp.css",
+    "sass:lint": "stylelint styles/**/*.scss",
+    "sass:watch": "node-sass styles/main.scss dist/styles.css -w -r",
+    "serve": "servor --reload"
+  },
+  "devDependencies": {
+    "autoprefixer": "10.4.16",
+    "husky": "8.0.0",
+    "node-sass": "9.0.0",
+    "npm-run-all": "4.1.5",
+    "postcss-cli": "10.1.0",
+    "servor": "4.0.2",
+    "stylelint": "15.10.3",
+    "stylelint-config-rational-order": "0.0.4",
+    "stylelint-config-standard-scss": "11.0.0",
+    "stylelint-order": "6.0.3"
+  }
+}
