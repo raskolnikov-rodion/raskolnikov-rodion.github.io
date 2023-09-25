@@ -10,6 +10,7 @@
     "css:compress": "node-sass dist/styles.prefix.css dist/styles.css --output-style compressed",
     "css:prefix": "postcss --use autoprefixer -b 'last 10 versions' dist/styles.comp.css -o dist/styles.prefix.css",
     "css:remove-partials": "rm dist/styles.comp.css dist/styles.prefix.css",
+    "config:git-hooks": "husky install",
     "sass:compile": "node-sass styles/main.scss dist/styles.comp.css",
     "sass:lint": "stylelint styles/**/*.scss",
     "sass:watch": "node-sass styles/main.scss dist/styles.css -w -r",
@@ -17,6 +18,7 @@
   },
   "devDependencies": {
     "autoprefixer": "10.4.16",
+    "husky": "8.0.0",
     "node-sass": "9.0.0",
     "npm-run-all": "4.1.5",
     "postcss-cli": "10.1.0",
