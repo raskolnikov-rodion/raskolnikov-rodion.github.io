@@ -1,17 +1,17 @@
 .intro {
-  padding: 5rem;
+  padding: 4rem 3rem 10rem;
 
   p {
-    font-size: 1.5rem;
+    font-size: 1rem;
     line-height: 1.5;
+
+    &:not(:last-of-type) {
+      margin-bottom: 1rem;
+    }
   }
 
-  p,
   &__header {
-    margin-bottom: 3rem;
-  }
-
-  &__header {
+    margin: 3rem 0;
     font-weight: normal;
     font-size: 4rem;
   }
@@ -21,6 +21,7 @@
 
     span {
       display: block;
+      color: var(--color-primary-extra-light);
       font-size: 4rem;
       font-family: var(--font-family-sans);
     }
