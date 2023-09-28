@@ -11,6 +11,8 @@
 
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
+  scroll-padding: var(--scroll-padding, 5rem);
 }
 
 body {
