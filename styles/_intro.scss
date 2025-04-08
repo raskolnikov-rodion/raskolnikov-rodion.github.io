@@ -1,29 +1,29 @@
 .intro {
-  padding: 5rem 3rem 10rem;
+  padding: 5rem 3rem 7rem;
+  text-align: center;
 
-  p {
-    font-size: 1rem;
-    line-height: 1.5;
-
-    &:not(:last-of-type) {
-      margin-bottom: 1rem;
-    }
+  &__greeting {
+    font-family: var(--font-family-mono);
+    margin-bottom: 3rem;
   }
 
-  &__header {
+  &__primary-info {
     margin: 3rem 0;
     font-weight: normal;
     font-size: 4rem;
   }
 
-  &__greeting {
-    font-family: var(--font-family-mono);
+  &__name {
+    color: var(--color-primary-extra-light);
+    font-size: 4rem;
+    font-family: var(--font-family-sans);
+  }
 
-    span {
-      display: block;
-      color: var(--color-primary-extra-light);
-      font-size: 4rem;
-      font-family: var(--font-family-sans);
+  &__secondary-info {
+    line-height: 1.5;
+
+    &:not(:last-of-type) {
+      margin-bottom: 1rem;
     }
   }
 }
